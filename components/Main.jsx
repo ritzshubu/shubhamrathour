@@ -24,7 +24,7 @@ const Main = () => {
           />
           </div>
           <p className='py-4 text-gray-600 sm:max-w-[70%] m-auto justify-center'>
-            I'm currently working as a backend <span className='text-[#ff3232]'>java developer</span>  and trying to learn more about <span className='text-[#ff3232]'>front-end</span> development.
+            I&#39;m currently working as a backend <span className='text-[#ff3232]'>java developer</span>  and trying to learn more about <span className='text-[#ff3232]'>front-end</span> development.
           </p>
           <p className='text-2xl sm:text-3xl md:text-4xl uppercase tracking-widest text-gray-600'>
             LET&#39;S DIG INTO MY <Link href='/#about'><span className='text-[#3a8cff] cursor-pointer'> PROFILE!</span></Link>

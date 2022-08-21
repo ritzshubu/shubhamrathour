@@ -67,7 +67,7 @@ const Navbar = () => {
           </a>
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
+          <ul style={{ color: `${linkColor}` }} className='hidden md:flex text-black'>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/'>Home</Link>
             </li>
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#c6d5e0] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -132,13 +132,13 @@ const Navbar = () => {
                 <AiOutlineClose />
               </div>
             </div>
-            <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
+            <div className='border-b border-gray-800 my-4'>
+              <p className='w-[85%] md:w-[90%] py-2 font-bold'>
                 Let&#39;s Dig into my profile!
               </p>
             </div>
           </div>
-          <div className='py-4 flex flex-col'>
+          <div className='py-4 flex flex-col font-bold'>
             <ul className='uppercase'>
               <Link href='/'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
@@ -167,15 +167,15 @@ const Navbar = () => {
               </Link>
               <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Contact
+                  Contact Me
                 </li>
               </Link>
             </ul>
-            <div className='pt-40'>
+            <div className='pt-36'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
                 Let&#39;s Connect
               </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
+              <div className='flex items-center justify-between my-2 w-full sm:w-[80%]'>
                 <a
                   href='https://www.linkedin.com/in/shubhamssr/'
                   target='_blank'
