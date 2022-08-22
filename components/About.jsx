@@ -27,9 +27,9 @@ const About = () => {
             With the eager to not stop learning, I started learning JAVA, whch infact was my first programming
             language, tbh it was tough in beginning. But with the kid inside me who wants to learn more, 
             I got proficient in Java which finally landed my first step in organisational level, and I started working
-            as a backend java developer at <a className='text-[#3a8cff] cursor-pointer' href='https://www.fisglobal.com/en/' target='_blank'>
+            as a backend java developer at <a className='text-[#3a8cff] cursor-pointer' href='https://www.fisglobal.com/en/' target='_blank' rel='noreferrer'>
                FIS Global. </a>Now I&#39;m learning more on production level with front-end learning going side-by-side. Husshhh! Enough of me.... If you want to connect with me feel 
-            free to drop a hi over <a className='text-[#3a8cff] cursor-pointer' href='/#contact'>HERE </a>
+            free to drop a hi over <Link className='text-[#3a8cff] cursor-pointer' href='/#contact'>HERE </Link>
           </p>
           <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer text-lg'>

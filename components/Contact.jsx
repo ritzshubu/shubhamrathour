@@ -1,13 +1,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { useForm, SubmitHandler } from "react-hook-form"
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE, 
+      form.current,
+      process.env.NEXT_PUBLIC_EMAIL_JS_USER
+      )
+      .then((result) => {
+          form.current.reset();
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <div id='contact' className='w-full lg:h-screen'>
@@ -70,58 +98,66 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
-              <form
-                action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
-                method='POST'
-                encType='multipart/form-data'
-              >
+              <form ref={form} onSubmit={handleSubmit(sendEmail)}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
-                    <input
+                    <label className='uppercase text-sm py-2'>NAME</label>
+                    <input {...register("name", { required: true})}
+                      placeholder='What can I call You?'
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
-                      name='name'
                     />
                   </div>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>
                       Phone Number
                     </label>
-                    <input
+                    <input {...register("phone", { required: false})}
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
-                      name='phone'
                     />
                   </div>
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Email</label>
-                  <input
+                  <label className='uppercase text-sm py-2'>E-mail</label>
+                  <input {...register("email", { required: true})}
+                      placeholder='How can I contact you?'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='email'
-                    name='email'
                   />
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Subject</label>
-                  <input
+                  <input {...register("subject", { required: false})}
+                    placeholder='What is it regarding?'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='text'
-                    name='subject'
                   />
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
-                  <textarea
+                  <textarea {...register("message", { required: true})}
+                      placeholder='Please leave comment/ feedback/ or maybe just a Hi!'
                     className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
-                    name='message'
+                    rows='8'
                   ></textarea>
                 </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
-                  Send Message
-                </button>
+                <div className='flex flex-col p-5'>
+                {errors.name && (
+                  <span className='text-red-500'> - Name field is required</span>
+                )}
+                {errors.email && (
+                  <span className='text-red-500'> - The Email Field is required</span>
+                )}
+                {errors.message && (
+                  <span className='text-red-500'> - Oops! Please send some message.</span>
+                )}
+              </div>
+              <input 
+              type='submit'
+              className='w-full p-4 mt-4 shadow bg-blue-500 hover:bg-blue-300 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer'
+              value="Send Message!"
+               />
               </form>
             </div>
           </div>

@@ -153,7 +153,7 @@ const Skills = () => {
           </div>
         </div>
         <div className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-500'>
-        <h3 className='py-4'>Database</h3>
+        <h3 className='py-4'>Databases</h3>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
           <div className='p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
