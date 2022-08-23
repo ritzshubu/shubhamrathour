@@ -17,7 +17,7 @@ const resume = () => {
 
       <div className='max-w-[940px] mx-auto p-2 pt-[120px]'>
         <h2 className='text-center'>Resume</h2>
-        <div className='bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center'>
+        <div className='bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center dark:bg-gray-600 dark:text-gray-100'>
           <h2 className='text-center'>Shubham Kumar Singh</h2>
           <div className='flex'>
             <a

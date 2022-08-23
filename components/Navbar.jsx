@@ -14,13 +14,16 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState('#fffff0');
   const [linkColor, setLinkColor] = useState('#1f2937');
   const {systemTheme, theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const renderThemeChanger = () => {
+    if(!mounted) return null;
+
     const currentTheme = theme ==='system' ? systemTheme : theme;
 
     if(currentTheme === 'dark') {
       return(
-        <SunIcon className='w-7 h-7' role='button' onClick={() => setTheme('light')} />
+        <SunIcon className='w-7 h-7 dark:text-gray-400' role='button' onClick={() => setTheme('light')} />
       )
     }
     else {
@@ -35,6 +38,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    setMounted(true);
     const handleShadow = () => {
       if (window.scrollY >= 90) {
         setShadow(true);
@@ -43,7 +47,7 @@ const Navbar = () => {
       }
     };
     window.addEventListener('scroll', handleShadow);
-  }, []);
+  },[]);
 
   return (
     <div
@@ -54,7 +58,7 @@ const Navbar = () => {
           : 'fixed w-full h-20 z-[100]'
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 font-extrabold'>
+      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 font-extrabold dark:bg-gray-900 dark:border-gray-700'>
         <Link href='/'>
           <a>
             <Image
@@ -71,22 +75,22 @@ const Navbar = () => {
             <li className='ml-10 text-sm uppercase hover:border-b'>
             {renderThemeChanger()}
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/'>Home</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/#about'>About</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/#skills'>Skills</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/#projects'>Projects</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/resume'>Resume</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
+            <li className='ml-10 text-sm uppercase hover:border-b dark:text-gray-100'>
               <Link href='/#contact'>Contact Me</Link>
             </li>
           </ul>
@@ -112,11 +116,11 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#f0f2dd] p-10 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#f0f2dd] p-10 ease-in duration-500 dark:bg-gray-900  dark:border-gray-700 dark:text-gray-100'
+              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500 dark:border-gray-700 dark:text-gray-100'
           }
         >
-          <div>
+          <div className='dark:border-gray-700'>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <a>
