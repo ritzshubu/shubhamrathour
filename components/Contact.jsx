@@ -3,8 +3,7 @@ import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form"
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter, FaPhoneAlt } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg'
 import emailjs from '@emailjs/browser';
@@ -59,7 +58,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className='uppercase pt-8'>Connect With Me</p>
+                <p className='uppercase pt-8 font-bold'>Connect With Me</p>
                 <div className='flex items-center justify-between py-4'>
                   <a
                     href='https://www.linkedin.com/in/shubhamssr/'
@@ -79,6 +78,13 @@ const Contact = () => {
                       <FaGithub />
                     </div>
                   </a>
+                  <a href='tel:+919905355042'
+                        target='_blank'
+                        rel='noreferrer'>
+                      <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <FaPhoneAlt />
+                      </div>
+                  </a>
                   <a
                     href='mailto:shubham.ssr30@gmail.com'
                     target='_blank'
@@ -88,13 +94,13 @@ const Contact = () => {
                     <AiOutlineMail />
                   </div>
                   </a>
-                  <Link href='/resume'>
-                    <a>
+                    <a href='https://twitter.com/gareeb_vidyarti'
+                        target='_blank'
+                        rel='noreferrer'>
                       <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <BsFillPersonLinesFill />
+                        <FaTwitter />
                       </div>
                     </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -145,7 +151,7 @@ const Contact = () => {
                   <textarea {...register("message", { required: true})}
                       placeholder='Please leave comment/ feedback/ or maybe just a Hi!'
                     className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='8'
+                    rows='4'
                   ></textarea>
                 </div>
                 <div className='flex flex-col p-5'>

@@ -178,7 +178,7 @@ const Navbar = () => {
               <h5 className='underline'> Toggle Theme</h5>
               {renderThemeChanger()}
             </div>
-            <div className='pt-36'>
+            <div className='pt-34'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
                 Let&#39;s Connect
               </p>
@@ -201,15 +201,17 @@ const Navbar = () => {
                     <FaGithub />
                   </div>
                 </a>
-                <Link href='/#contact'>
+                <a href='mailto:shubham.ssr30@gmail.com'
+                    target='_blank'
+                    rel='noreferrer'>
                   <div
                     onClick={() => setNav(!nav)}
                     className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                   >
                     <AiOutlineMail />
                   </div>
-                </Link>
-                <Link href='/resume'>
+                </a>
+                <Link href='/#contact'>
                   <div
                     onClick={() => setNav(!nav)}
                     className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'

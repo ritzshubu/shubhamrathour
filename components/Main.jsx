@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Typewriter from 'typewriter-effect'
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import {GrDocumentText} from 'react-icons/gr'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const Main = () => {
@@ -59,7 +59,7 @@ const Main = () => {
             </a>
             <Link href='/resume'>
               <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                <BsFillPersonLinesFill />
+                <GrDocumentText />
               </div>
             </Link>
           </div>
