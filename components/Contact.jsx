@@ -79,10 +79,15 @@ const Contact = () => {
                       <FaGithub />
                     </div>
                   </a>
-
+                  <a
+                    href='mailto:shubham.ssr30@gmail.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                   <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail />
                   </div>
+                  </a>
                   <Link href='/resume'>
                     <a>
                       <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
@@ -113,6 +118,7 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <input {...register("phone", { required: false})}
+                      placeholder='(+91) 9012345678'
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
                     />

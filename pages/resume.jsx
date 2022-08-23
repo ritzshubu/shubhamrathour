@@ -18,7 +18,7 @@ const resume = () => {
       <div className='max-w-[940px] mx-auto p-2 pt-[120px]'>
         <h2 className='text-center'>Resume</h2>
         <div className='bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center'>
-          <h2 className='flex text-center item-center'>Shubham Kumar Singh</h2>
+          <h2 className='text-center'>Shubham Kumar Singh</h2>
           <div className='flex'>
             <a
               href='https://www.linkedin.com/in/shubhamssr/'
@@ -54,13 +54,13 @@ const resume = () => {
           <div className='hidden sm:block'>
             <p>
               Software Engineer <span className='px-1'>|</span> Web Development{' '}
-              <span className='px-1'>|</span> AGILE practitioner
+              <span className='px-1'>|</span>AGILE practitioner
             </p>
           </div>
           <div className='block sm:hidden'>
-            <p>Proven Leadership</p>
-            <p className='py-2'>Web Development</p>
-            <p>Complex Problem Solving</p>
+            <p className='underline underline-offset-auto'>Software Engineer</p>
+            <p className='underline underline-offset-auto'>Web Development</p>
+            <p className='underline underline-offset-auto'>AGILE practitioner</p>
           </div>
         </div>
         <p>
