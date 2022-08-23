@@ -106,7 +106,7 @@ const Contact = () => {
               <form ref={form} onSubmit={handleSubmit(sendEmail)}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>NAME</label>
+                    <label className='uppercase text-sm py-2 font-bold'>NAME</label>
                     <input {...register("name", { required: true})}
                       placeholder='What can I call You?'
                       className='border-2 rounded-lg p-3 flex border-gray-300'
@@ -114,7 +114,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
+                    <label className='uppercase text-sm py-2 font-bold'>
                       Phone Number
                     </label>
                     <input {...register("phone", { required: false})}
@@ -125,7 +125,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>E-mail</label>
+                  <label className='uppercase text-sm py-2 font-bold'>E-mail</label>
                   <input {...register("email", { required: true})}
                       placeholder='How can I contact you?'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
@@ -133,7 +133,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
+                  <label className='uppercase text-sm py-2 font-bold'>Subject</label>
                   <input {...register("subject", { required: false})}
                     placeholder='What is it regarding?'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
@@ -141,7 +141,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
+                  <label className='uppercase text-sm py-2 font-bold'>Message</label>
                   <textarea {...register("message", { required: true})}
                       placeholder='Please leave comment/ feedback/ or maybe just a Hi!'
                     className='border-2 rounded-lg p-3 border-gray-300'

@@ -4,31 +4,31 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-// import { useRouter } from 'next/router';
-import NavLogo from '../public/assets/navLogo.png'
+import NavLogo from '../public/assets/navLogo.png';
+import {useTheme} from 'next-themes';
+import {MoonIcon, SunIcon} from '@heroicons/react/solid'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#fffff0');
   const [linkColor, setLinkColor] = useState('#1f2937');
-  // const [position, setPosition] = useState('fixed')
-  // const router = useRouter();
+  const {systemTheme, theme, setTheme} = useTheme();
 
-  // useEffect(() => {
-  //   if (
-  //     router.asPath === '/property' ||
-  //     router.asPath === '/crypto' ||
-  //     router.asPath === '/netflix' ||
-  //     router.asPath === '/twitch'
-  //   ) {
-  //     setNavBg('transparent');
-  //     setLinkColor('#ecf0f3');
-  //   } else {
-  //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
-  //   }
-  // }, [router]);
+  const renderThemeChanger = () => {
+    const currentTheme = theme ==='system' ? systemTheme : theme;
+
+    if(currentTheme === 'dark') {
+      return(
+        <SunIcon className='w-7 h-7' role='button' onClick={() => setTheme('light')} />
+      )
+    }
+    else {
+      return(
+        <MoonIcon className='w-7 h-7' role='button' onClick={() => setTheme('dark')} />
+      );
+    }
+  };
 
   const handleNav = () => {
     setNav(!nav);
@@ -68,6 +68,9 @@ const Navbar = () => {
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex text-black'>
+            <li className='ml-10 text-sm uppercase hover:border-b'>
+            {renderThemeChanger()}
+            </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/'>Home</Link>
             </li>
@@ -171,6 +174,10 @@ const Navbar = () => {
                 </li>
               </Link>
             </ul>
+            <div className='py-4'>
+              <h5 className='underline'> Toggle Theme</h5>
+              {renderThemeChanger()}
+            </div>
             <div className='pt-36'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
                 Let&#39;s Connect
