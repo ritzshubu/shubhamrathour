@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import mediumImg from '../public/assets/projects/medium.png';
+import expressImg from '../public/assets/projects/expressnews.png';
+import ijleImg from '../public/assets/projects/ijle.png';
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -15,7 +17,18 @@ const Projects = () => {
             backgroundImg={mediumImg}
             projectUrl='/medium'
             tech='Next JS'
-
+          />
+          <ProjectItem
+            title='Express NEWS'
+            backgroundImg={expressImg}
+            projectUrl='/express'
+            tech='CMS PHP'
+          />
+          <ProjectItem
+            title='IJLE'
+            backgroundImg={ijleImg}
+            projectUrl='/ijle'
+            tech='REACT JS'
           />
         </div>
       </div>

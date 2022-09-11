@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
 import { SiLeetcode } from 'react-icons/si';
 
 const resume = () => {
@@ -20,6 +22,20 @@ const resume = () => {
         <div className='bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center dark:bg-gray-600 dark:text-gray-100'>
           <h2 className='text-center'>Shubham Kumar Singh</h2>
           <div className='flex'>
+            <a
+              href='mailto:shubham.ssr30@gmail.com'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <AiOutlineMail size={20} style={{ marginRight: '1rem' }} />
+            </a>
+            <a
+              href='tel:+919905355042'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <BsFillTelephoneFill size={20} style={{ marginRight: '1rem' }} />
+            </a>
             <a
               href='https://www.linkedin.com/in/shubhamssr/'
               target='_blank'
@@ -106,62 +122,86 @@ const resume = () => {
             <span className='px-2'>|</span>AWS Cloud Practitioner
           </p>
         </div>
-
-        <h5 className='text-center underline text-[18px] py-4'>
-          Professional Experience
-        </h5>
-        {/* Experience */}
-        <div className='py-6'>
-          <p className='italic'>
-            <span className='font-bold italic'>
-              FIS Global
-            </span>
-            <span className='px-2'>|</span>KA, IN
-          </p>
-          <p className='py-1 italic'>Software Engineer E (2021 - Current)</p>
-          <h6 className='italic'> Project : Enterprise API (Merchant Solutions)</h6>
-          <ul className='list-disc list-outside px-7 py-1 leading-relaxed'>
-            <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-            </li>
-            <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-            </li>
-            <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-            </li>
-          </ul>
+        <div>
+          <h5 className='text-center underline text-[18px] py-4'>
+            Professional Experience
+          </h5>
+          {/* Experience */}
+          <div className='py-6'>
+            <p className='italic'>
+              <span className='font-bold italic'>
+                FIS Global
+              </span>
+              <span className='px-2'>|</span>KA, IN
+            </p>
+            <p className='py-1 italic'>Software Engineer E (June 2021 - Current)</p>
+            <h6 className='italic'> Project : Enterprise API (Merchant Solutions)</h6>
+            <ul className='list-disc list-outside px-7 py-1 leading-relaxed'>
+              <li>
+                  <span className='italic font-bold'> Authorization Batches - </span>Created a backened API service for TOAST client that enables them to retrieve the precise contents of a batch 
+                  before release which help them troubleshoot issues while authorizing and reversing payments. API is currently handling more than 60k merchants.
+              </li>
+              <li>
+                  <span className='italic font-bold'> Reporting API - </span>Enhanced an existing API that enables clients(banks/ financial institutions) to retrieve data on 
+                  successful deposit, settlements and bank-errors. API was enhanced to include real time and non-real time authorizations, get complete details of an individual real time and non-real time authorization, 
+                  summary of real time and non-real time authorizations.
+              </li>
+              <li>
+                The average response time of API is around 3-5 seconds/4000 records. Sensitive data are masked according to the license being passed in it.
+                APIs are deployed in AWS server.
+              </li>
+              <li>
+                Database Used : IBM DB2, Snowflake
+              </li>
+            </ul>
+          </div>
+          {/* Experience */}
+          <div className='py-6'>
+            <p className='italic'>
+              <span className='font-bold'>DXC Technology</span>
+              <span className='px-2'>|</span>KA, IN
+            </p>
+            <p className='py-1 italic'>Intern : Associate Professional </p>
+            <ul className='list-disc list-outside px-7 py-1 leading-relaxed'>
+              <li>
+              Used Dynatrace, an application monitoring tool that helps
+              the users with proper performance monitoring and
+                consistent availability in the system.
+              </li>
+              <li>
+                Performed operational insights to enhance the productivity caused by 
+                heavy load on the server.
+              </li>
+            </ul>
+          </div>
         </div>
-        {/* Experience */}
-        <div className='py-6'>
-          <p className='italic'>
-            <span className='font-bold'>DXC Technology</span>
-            <span className='px-2'>|</span>KA, IN
-          </p>
-          <p className='py-1 italic'>Intern : Associate Professional </p>
-          <ul className='list-disc list-outside px-7 py-1 leading-relaxed'>
-            <li>
-            Used Dynatrace, an application monitoring tool that helps
-             the users with proper performance monitoring and
-              consistent availability in the system.
-            </li>
-            <li>
-              Performed operational insights to enhance the productivity caused by 
-              heavy load on the server.
-            </li>
-          </ul>
+        <div>
+          <h5 className='text-center underline text-[18px] py-4'>
+            Education
+          </h5>
+          {/* Education */}
+          <div className ='flex'>
+          <div className='px-12'>
+            <p className='italic'>
+              <span className='font-bold italic'>
+                REVA University,
+              </span>
+              <span className='px-2'>|</span> Bengaluru, KA, IN
+            </p>
+            <p className='py-1 italic'>B.Tech (August 2017 - June 2021)</p>
+            <h6 className='italic'> Computer Science Engineering (CGPA : 9.19) </h6>
+            </div>
+            <div>
+            <p className='italic'>
+              <span className='font-bold italic'>
+                SRI Chaintanya Techno School,
+              </span>
+              <span className='px-2'>|</span> Visakhapatnam, AP, IN
+            </p>
+            <p className='py-1 italic'>Intermediate (June 2015 - May 2017)</p>
+            <h6 className='italic'> MPC + IP (Percentage : 82.2) </h6>
+            </div>
+        </div>
         </div>
       </div>
     </>

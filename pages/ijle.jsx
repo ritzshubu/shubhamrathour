@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-import mediumImg from '../public/assets/projects/medium.png';
+import ijleImg from '../public/assets/projects/ijle.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
-const medium = () => {
+const ijle = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
@@ -13,12 +13,12 @@ const medium = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={mediumImg}
+          src={ijleImg}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Medium Clone App</h2>
-          <h3>NextJS / Tailwind / Sanity.io</h3>
+          <h2 className='py-2'>IJLE</h2>
+          <h3>REACT JS/ Mongo Db</h3>
         </div>
       </div>
 
@@ -31,29 +31,33 @@ const medium = () => {
             <ul>
               <li className='my-4'>
               <p>
-                A clone of medium to publish article and visitors/ readers can comment on the the article. The comments are shown after it is
-                authorized by the admin. Whole CMS is integrated with sanity.io which make it pretty easy to consolidate every components at one 
-                place. <br/>
+                An in-production website for Journal Expatiate, "IJLE", abbr. International Journal of Legal Expatiate,
+                 which publishes paper and article licensed under IJLE. The website has clean UI for better UX and the server used
+                 to host this website was DigitalOcean.
+              <br/>
               </p>
               </li>
               <li className='my-4'>
-              Server-side rendering (SSR) <br/>
+              Can Handle large set of data <br/>
               </li>
               <li className='my-4'>
-              Styled with Tailwind CSS3 <br/>
+                Feature to filter results based on most upvotes/ published dated. <br/>
+              </li>
+              <li className='my-4'>
+                Pagination <br/>
               </li>
 
             </ul>
           </div>
           <a
-            href='https://github.com/ritzshubu/medium-2.0'
+            href='https://github.com/ritzshubu/IJLE/'
             target='_blank'
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
           <a
-            href='https://medium-clone-ritzshubu.vercel.app/'
+            href='http://ijle.org/'
             target='_blank'
             rel='noreferrer'
           >
@@ -65,19 +69,22 @@ const medium = () => {
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
             <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> TypeScript
+                <RiRadioButtonFill className='pr-1' /> React JS
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> NextJS
+                <RiRadioButtonFill className='pr-1' /> Node JS
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Tailwind
+                <RiRadioButtonFill className='pr-1' /> Express JS
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> React
+                <RiRadioButtonFill className='pr-1' /> Mongo DB
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Sanity CMS
+                <RiRadioButtonFill className='pr-1' /> Digital Ocean
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> MySQL
               </p>
             </div>
           </div>
@@ -90,4 +97,4 @@ const medium = () => {
   );
 };
 
-export default medium;
+export default ijle;
