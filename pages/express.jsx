@@ -31,7 +31,7 @@ const express = () => {
             <ul>
               <li className='my-4'>
               <p>
-                An in-production website for NEWS house, "ExpressNEWS" which has more than 1 million followers. built CMS using PHP 
+                An in-production website for NEWS house, &quot;ExpressNEWS&quot; which has more than 1 million followers. built CMS using PHP 
                 to manage the content in the website. Option for newsletter subscription. <br/>
               </p>
               </li>

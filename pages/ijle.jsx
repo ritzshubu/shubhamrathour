@@ -31,7 +31,7 @@ const ijle = () => {
             <ul>
               <li className='my-4'>
               <p>
-                An in-production website for Journal Expatiate, "IJLE", abbr. International Journal of Legal Expatiate,
+                An in-production website for Journal Expatiate, &quot;IJLE&quot;, abbr. International Journal of Legal Expatiate,
                  which publishes paper and article licensed under IJLE. The website has clean UI for better UX and the server used
                  to host this website was DigitalOcean.
               <br/>
