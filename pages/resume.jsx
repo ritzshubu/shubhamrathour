@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import { HiCloudDownload } from 'react-icons/hi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { SiLeetcode } from 'react-icons/si';
 
@@ -12,13 +13,19 @@ const resume = () => {
         <title>Shubham Kumar Singh | Resume</title>
         <meta
           name='description'
-          content="I'm Software Engineer cum Front-end Developer. I'm creating this portfolio as a part of studying NextJs"
+          content="I'm Software Engineer cum Front-end Developer. I'm creating this portfolio as a part of studying NextJS"
         />
         <link rel='icon' href='/fav.png' />
       </Head>
 
       <div className='max-w-[940px] mx-auto p-2 pt-[120px]'>
-        <h2 className='text-center'>Resume</h2>
+        <a
+            href='https://drive.google.com/file/d/1_xKfGYh6UsBM0yzEYpf6FoafYqqAzyaR/view?usp=drivesdk'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <h2 className='text-center'>Resume 📝</h2>
+        </a>
         <div className='bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center dark:bg-gray-600 dark:text-gray-100'>
           <h2 className='text-center'>Shubham Kumar Singh</h2>
           <div className='flex'>
@@ -101,6 +108,13 @@ const resume = () => {
             <span className='px-2'>|</span>C/ C++
           </p>
           <p className='py-2'>
+            <span className='font-bold'>Database</span>
+            <span className='px-2'>:</span>IBM DB2
+            <span className='px-2'>:</span>Oracle
+            <span className='px-2'>:</span>MongoDb
+            <span className='px-2'>|</span>MySQL
+          </p>
+          <p className='py-2'>
             <span className='font-bold'>Web Technology</span>
             <span className='px-2'>:</span>HTML/ CSS/ JS
             <span className='px-2'>|</span> Tailwind CSS
@@ -108,6 +122,7 @@ const resume = () => {
           </p>
           <p className='py-2'>
             <span className='font-bold'>Frameworks</span>
+            <span className='px-2'>:</span>Hibernate
             <span className='px-2'>:</span>Spring
             <span className='px-2'>|</span>NextJS
           </p>
@@ -194,7 +209,7 @@ const resume = () => {
             <div>
             <p className='italic'>
               <span className='font-bold italic'>
-                SRI Chaintanya Techno School,
+                Sri Chaitanya Techno School,
               </span>
               <span className='px-2'>|</span> Visakhapatnam, AP, IN
             </p>
