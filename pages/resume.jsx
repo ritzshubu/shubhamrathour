@@ -20,7 +20,7 @@ const resume = () => {
 
       <div className='max-w-[940px] mx-auto p-2 pt-[120px]'>
         <a
-            href='https://drive.google.com/file/d/1_xKfGYh6UsBM0yzEYpf6FoafYqqAzyaR/view?usp=drivesdk'
+            href='https://github.com/ritzshubu/shubhamrathour/raw/main/public/assets/Shubham_Kumar_Singh_Resume.pdf'
             target='_blank'
             rel='noreferrer'
           >
