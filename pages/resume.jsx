@@ -110,14 +110,14 @@ const resume = () => {
           <p className='py-2'>
             <span className='font-bold'>Database</span>
             <span className='px-2'>:</span>IBM DB2
-            <span className='px-2'>:</span>Oracle
-            <span className='px-2'>:</span>MongoDb
+            <span className='px-2'>|</span>Oracle
+            <span className='px-2'>|</span>MongoDb
             <span className='px-2'>|</span>MySQL
           </p>
           <p className='py-2'>
             <span className='font-bold'>Web Technology</span>
             <span className='px-2'>:</span>HTML/ CSS/ JS
-            <span className='px-2'>|</span> Tailwind CSS
+            <span className='px-2'>|</span>Tailwind CSS
             <span className='px-2'>|</span>React
           </p>
           <p className='py-2'>
